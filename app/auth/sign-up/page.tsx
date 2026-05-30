@@ -40,7 +40,7 @@ export default function SignUpForm() {
           {state.error}
         </div>
       )}
-
+      <p>by signing up i have read, understood and agreed to the terms and condition</p>
       <button type="submit" disabled={isPending}
         className="flex w-sm justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400">
         {isPending ? 'Creating account...' : 'Create Account'}
