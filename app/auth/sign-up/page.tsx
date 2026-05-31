@@ -19,20 +19,20 @@ export default function SignUpForm() {
       <div className='flex flex-col gap-1.5 w-sm'>
         <label htmlFor="name" className="block text-sm font-medium text-gray-100">Name</label>
         <input id="name" name="name" type="text" required placeholder="John Doe"
-          className="block rounded-md w-full bg-white/5 px-2 py-1.5 placeholder:text-gray-500 text-white outline-1 outline-white/10 focus:outline-indigo-500"
+          className="block rounded-md w-full bg-white/5 px-2 py-1.5 placeholder:text-gray-500 text-white outline-1 outline-white/10 focus:outline-blue-500"
         />
       </div>
 
       <div className='flex flex-col gap-1.5 w-sm'>
         <label htmlFor="email" className="block text-sm font-medium text-gray-100">Email address</label>
         <input id="email" name="email" type="email" required placeholder="john@my-company.com"
-          className="block rounded-md w-full bg-white/5 px-2 py-1.5 placeholder:text-gray-500 text-white outline-1 outline-white/10  focus:outline-indigo-500"/>
+          className="block rounded-md w-full bg-white/5 px-2 py-1.5 placeholder:text-gray-500 text-white outline-1 outline-white/10  focus:outline-blue-500"/>
       </div>
 
       <div className='flex flex-col gap-1.5 w-sm'>
         <label htmlFor="password" className="block text-sm font-medium text-gray-100">Password</label>
         <input id="password" name="password" type="password" required placeholder="*****"
-          className="block rounded-md w-full bg-white/5 px-2 py-1.5 placeholder:text-gray-500 text-white outline-1 outline-white/10  focus:outline-indigo-500"/>
+          className="block rounded-md w-full bg-white/5 px-2 py-1.5 placeholder:text-gray-500 text-white outline-1 outline-white/10  focus:outline-blue-500"/>
       </div>
 
       {state?.error && (
@@ -40,9 +40,9 @@ export default function SignUpForm() {
           {state.error}
         </div>
       )}
-      <p>by signing up i have read, understood and agreed to the terms and condition</p>
+     
       <button type="submit" disabled={isPending}
-        className="flex w-sm justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-indigo-400">
+        className="flex w-sm justify-center rounded-md bg-blue-500 px-3 py-1.5 text-sm/6 font-semibold text-white hover:bg-blue-400 cursor-pointer">
         {isPending ? 'Creating account...' : 'Create Account'}
       </button>
       <p>i already have an account <span className='text-blue-500'><Link href={`/auth/sign-in`}>sign in</Link></span></p>
